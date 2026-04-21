@@ -1,7 +1,7 @@
 # TaskForge - Task Management System
 
 ## 📖 Overview
-ToDoList is a Java-based task management system with a **JavaFX UI** and a robust **backend**.  
+ToDoList is a Java-based task management system with a **SWING GUI** and a robust **backend**.  
 It allows users to create, manage, and track tasks with deadlines, priorities, and streaks.  
 Tasks can be saved to disk and reloaded later, ensuring persistence across sessions.
 
@@ -15,7 +15,7 @@ Tasks can be saved to disk and reloaded later, ensuring persistence across sessi
 - Search tasks by title, priority, or status
 - Statistics: completion rate, pending count, streaks
 - Save and load tasks from file (`FileHandler`)
-- JavaFX UI with interactive controls
+- SWING GUI with interactive controls
 
 ---
 
@@ -46,20 +46,20 @@ Tasks can be saved to disk and reloaded later, ensuring persistence across sessi
   
 
 - **`Main.java`**
-    - JavaFX application entry point with UI
+    - SWING application entry point with GUI
 
 ---
 
 ## 🚀 How to Run
-1. Install **JDK 17+** and download **JavaFX SDK** (see [OpenJFX](https://openjfx.io)).
-2. In IntelliJ IDEA:
+
+1. In IntelliJ IDEA:
     - Go to **Run → Edit Configurations…**
     - Add VM options:
       ```
       --module-path "C:\path\to\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml
       ```
-3. Run `Main.java`.
-4. Tasks will be saved to `taskforge_tasks.dat` on exit and reloaded on startup.
+2. Run `Main.java`.
+3. Tasks will be saved to `taskforge_tasks.dat` on exit and reloaded on startup.
 
 ---- Supports both **regular tasks** and **deadline tasks**.
 - On startup, tasks are reloaded into the `TaskManager`.
@@ -119,7 +119,7 @@ Tasks can be saved to disk and reloaded later, ensuring persistence across sessi
 
 ## 📝 Notes
 - Backend logic is fully reusable without the UI.
-- JavaFX UI provides an interactive interface but is optional for backend testing.
+- SWING GUI provides an interactive interface but is optional for backend testing.
 - JUnit tests can be added for validation but are not included here.
 
 ---
@@ -132,7 +132,7 @@ Tasks can be saved to disk and reloaded later, ensuring persistence across sessi
 ---
 
 ## 📝 Notes
-- This project includes both **backend logic** and a **JavaFX UI**.
+- This project includes both **backend logic** and a **SWING GUI**.
 - Backend classes (`model`, `manager`, `utils`, `fileio`, `exception`) are reusable independently of the UI.
 - JUnit tests can be added for validation but are optional.
 
