@@ -2,20 +2,19 @@ package todolist.manager;
 
 import todolist.exception.TaskException;
 import todolist.model.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class TaskManager {
-    private final ObservableList<Task> tasks;
+    private final List<Task> tasks;
     private final StrikeManager streakTracker;
 
     public TaskManager() {
-        this.tasks = FXCollections.observableArrayList();
+        this.tasks = new ArrayList<>();
         this.streakTracker = new StrikeManager();
     }
 
@@ -140,8 +139,7 @@ public class TaskManager {
         return streakTracker;
     }
 
-    // Observable list for UI binding
-    public ObservableList<Task> getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
